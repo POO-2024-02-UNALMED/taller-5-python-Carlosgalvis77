@@ -6,9 +6,8 @@ class Animal:
         self._nombre = nombre
         self._edad = edad
         self._habitat =habitat
-        self._zona = None
+        self._zona = []
         self._genero = genero
-        Zona.agregarAnimales(self)
         Animal._totalAnimales += 1
 
     def setNombre (self, nombre):
