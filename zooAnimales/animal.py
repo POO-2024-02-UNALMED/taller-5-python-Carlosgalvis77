@@ -56,12 +56,12 @@ class Animal:
             return 'saltar'
         
     def toString(self):
-        if self._zona == None:
+        if self._zona == []:
             return (f'Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}')
         else:
             return (f'Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona}, en el zoo {self._zona._zoo._nombre}')    
     
-    def totalPorTipos(self):
+    def totalPorTipo(self):
         from mamifero import Mamifero
         from ave import Ave
         from reptil import Reptil
