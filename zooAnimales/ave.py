@@ -5,20 +5,20 @@ class Ave(Animal):
     halcones = 0
     aguilas = 0
     
-    def __init__(self, nombre='', edad=0, habitat='', genero='', zona=None, colorPlumas = ''):
-        super().__init__(nombre, edad, habitat, genero, zona)
+    def __init__(self, nombre='', edad=0, habitat='', genero='', colorPlumas = ''):
+        super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas= colorPlumas
         Ave._listado.append(self)
 
     @classmethod
-    def crearHalcon(cls, nombre='', edad=None, genero='',zona = None ):
+    def crearHalcon(cls, nombre='', edad=None, genero='' ):
         Ave.halcones += 1
-        return Ave(nombre, edad, habitat = 'montañas', genero = genero, zona= zona, colorPlumas= 'café glorioso' )
+        return Ave(nombre, edad, habitat = 'montañas', genero = genero, colorPlumas= 'café glorioso' )
     
     @classmethod
-    def crearAguila (cls, nombre='', edad=None, genero='',zona = None ):
+    def crearAguila (cls, nombre='', edad=None, genero='' ):
         Ave.aguilas += 1
-        return Ave(nombre, edad, habitat = 'montañas', genero = genero, zona= zona, colorPlumas= 'blanco y amarillo' )
+        return Ave(nombre, edad, habitat = 'montañas', genero = genero, colorPlumas= 'blanco y amarillo' )
 
     def setColorPlumas(self, color):
         self._colorPlumas = color
