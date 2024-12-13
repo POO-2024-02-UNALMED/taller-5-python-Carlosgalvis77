@@ -61,14 +61,13 @@ class Animal:
         else:
             return (f'Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona}, en el zoo {self._zona._zoo._nombre}')    
     
-    def totalPorTipo(self):
-        from mamifero import Mamifero
-        from ave import Ave
-        from reptil import Reptil
-        from pez import Pez
-        from anfibio import Anfibio
-        print(f'Mamíferos: {len(Mamifero.listado)}')
-        print(f'Aves: {len(Ave.listado)}')
-        print(f'Reptiles: {len(Reptil.listado)}')
-        print(f'Peces: {len(Pez.listado)}')
-        print(f'Anfibios: {len(Anfibio.listado)}')
+    @classmethod
+    def totalPorTipo(cls):
+        from .mamifero import Mamifero
+        from .ave import Ave
+        from .reptil import Reptil
+        from .pez import Pez
+        from .anfibio import Anfibio
+
+        return (f'Mamiferos : {len(Mamifero._listado)}\nAves : {len(Ave._listado)}\nReptiles : {len(Reptil._listado)}\nPeces : {len(Pez._listado)}\nAnfibios : {len(Anfibio._listado)}')
+        
