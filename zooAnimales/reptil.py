@@ -20,7 +20,7 @@ class Reptil(Animal):
         return Reptil(nombre, edad, habitat='humedal', genero=genero, colorEscamas='verde', largoCola=3)
     
     @classmethod
-    def crearSerpientes(self, nombre='', edad=0, genero=''):
+    def crearSerpiente(self, nombre='', edad=0, genero=''):
         Reptil.serpientes += 1
         return Reptil(nombre, edad, habitat='jungla', genero=genero, colorEscamas='blanco', largoCola=1)
     
